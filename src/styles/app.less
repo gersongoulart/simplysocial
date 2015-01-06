@@ -1,0 +1,298 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:  Simple Social App
+Version:  0.1
+Last change:  2015-01-05
+Assigned to:  Gerson Goulart <gerson.goulart@gmail.com>
+-------------------------------------------------------------------*/
+
+@import "variables";
+@import "imports";
+
+
+/*------------------------------------------------------------------
+[1. Common Styles]
+*/
+
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+html, body, input {
+  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+}
+
+body {
+  color: #70767f;
+  font-size: 100%;
+  font-weight: 300;
+}
+
+a {
+  color: #c3c7d0;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.clear:before,
+.clear:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clear:after {
+    clear: both;
+}
+
+.avatar {
+  border-radius: 3px;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #70767f;
+}
+
+/*------------------------------------------------------------------
+[2. Navbar]
+*/
+
+.navbar {
+  padding: .8em;
+  background-color: #262728;
+  font-size: 1.1em;
+
+  h1 {
+    float:left;
+    color: #bec3cc;
+    font-size: 1em;
+    font-weight: normal;
+
+    span {
+      color: #70767f;
+    }
+  }
+
+  .icon-simplysocial,
+  .icon-new-message {
+    color: #00cc99;
+    font-size: 1.5em;
+    margin-top: -.5em;
+    position: relative;
+    top: .3em;
+  }
+}
+
+.user-panel {
+  float:right;
+
+  li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin-left: 1em;
+  }
+}
+
+.user-panel__search {
+  border: 1px solid #515458;
+  border-radius: 3px;
+
+  input {
+    height: 17px;
+    margin:.5em;
+    color: #70767f;
+    border: 0;
+    background-color: #262728;
+    outline: none;
+    font-size: .75em;
+  }
+
+  .icon-search {
+    color: #616468;
+    margin: -.5em .5em 0;
+    position: relative;
+    top: .15em;
+  }
+}
+
+.user-panel__profile {
+  img {
+    margin-top: -17px;
+    position: absolute;
+    top: 50%;
+  }
+
+  .arrow-down {
+    float: right;
+    position: relative;
+    top: 0px;
+    margin: 0 0 0 40px;
+    border-top-color: #616468;
+  }
+}
+
+
+/*------------------------------------------------------------------
+[3. Hero]
+*/
+
+.hero {
+  // background: url(assets/images/hero.jpg) top center no-repeat;
+  background: url(assets/images/hero-bg.png) top center;
+}
+
+.hero__bg {
+  background: url(assets/images/hero.jpg) top center no-repeat;
+}
+
+.hero__inner {
+  max-width:575px;
+  padding: 123px 0 146px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero__add-message {
+  border-radius: 3px;
+  background-color: rgba(0, 178, 134, .7);
+
+  input {
+    width:545px;
+    margin: 30px;
+    color: #fff;
+    border: 0;
+    background: none transparent;
+    outline: none;
+    font-size: 1.875em;
+
+    &::-webkit-input-placeholder { color: #81cabb; font-size: 1em; }
+    &:-moz-placeholder { /* Firefox 18- */ color: #81cabb; font-size: 1em; }
+    &::-moz-placeholder {  /* Firefox 19+ */ color: #81cabb; font-size: 1em; }
+    &:-ms-input-placeholder { color: #81cabb; font-size: 1em; }
+  }
+
+  li {
+    // padding: 1.4em .8em;
+    margin: 0 0 30px 30px;
+    display: inline-block;
+    list-style: none;
+    color: #81cabb;
+    cursor: pointer;
+  }
+}
+
+.hero__menu {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  li {
+    padding: 1.4em .8em;
+    margin: 0 1.4em 0 0;
+    display: inline-block;
+    list-style: none;
+    color: #bec3cc;
+    text-transform: uppercase;
+    font-size: .75em;
+    font-weight: 600;
+    cursor: pointer;
+
+    &.icon {
+      margin:0;
+      float:right;
+      color: #747c83;
+
+      &.current {
+        color: #fff;
+      }
+    }
+
+    &.active {
+      padding-bottom: 1.05em;
+      border-bottom: .4em solid #00cc99;
+      color: #fff;
+    }
+  }
+}
+
+
+/*------------------------------------------------------------------
+[4. Posts]
+*/
+
+.posts {
+  max-width:575px;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.posts--list-view {
+  li {
+    margin: 2em 0;
+    overflow: hidden;
+    border: 1px solid #dee1e5;
+    border-radius: 4px;
+    list-style: none;
+  }
+}
+
+.post__body {
+  padding: 25px 25px 25px 85px;
+  position: relative;
+  font-size: .9em;
+  line-height: 1.6em;
+
+  h6 {
+    margin-bottom: .5em;
+    color: #3f454d;
+    font-size: 1.1em;
+    font-weight: normal;
+  }
+
+  img {
+    float: left;
+    position: absolute;
+    left: 25px;
+  }
+}
+
+.post__body--reply {
+  border-top: 1px solid #eff0f2;
+  background-color: #f9fafc;
+}
+
+.post__social {
+  float: right;
+
+  a {
+    margin: 0 0 0 1em;
+    display: inline-block;
+  }
+}
+
+.post__expand {
+  margin: 2em 0 0;
+  font-size: .8em;
+
+  .arrow-down {
+    border-top-color: #c3c7d0;
+    position: relative;
+    top: -2px;
+  }
+}
