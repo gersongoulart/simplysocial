@@ -5,9 +5,11 @@ Building InVision's demo "simplysocial" in AngularJS and LESS CSS for fun and pr
 
 # Build
 
-npm install
-bower install
-gulp
+Make sure you have `gulp-cli` installeg globally.
+
+- `npm install`
+- `bower install`
+- `gulp`
 
 The solution will be serverd at http://localhost:8080
 
