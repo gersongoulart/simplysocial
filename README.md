@@ -19,3 +19,5 @@ The solution will be serverd at http://localhost:8080
 - Using simplified version of BEM for CSS syntax
 - Could be using SCSS for CSS (chose LESS for simplicity of running it with NodeJs withouth dependencies)
 - Not using LESS color functions at this point for not knowing the basic color palette yet
+- Created angular filter to sanitize posts for security and automatically generate #hashtag and @mention urls
+- The dialog is built for supporting dinamically changing the content on the fly (Eg. try resizing the textarea)

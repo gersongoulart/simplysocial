@@ -8,7 +8,8 @@ Assigned to:  Gerson Goulart <gerson.goulart@gmail.com>
 -------------------------------------------------------------------*/
 
 @import "variables";
-@import "imports";
+@import "icons";
+@import "dialog";
 
 
 /*------------------------------------------------------------------
@@ -21,8 +22,13 @@ Assigned to:  Gerson Goulart <gerson.goulart@gmail.com>
   box-sizing: border-box;
 }
 
-html, body, input {
-  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+html, body {
+  height: 100%;
+  overflow: hidden;
+
+  &, input {
+    font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+  }
 }
 
 body {
@@ -58,21 +64,47 @@ a {
   border-radius: 3px;
 }
 
+.arrow-up,
 .arrow-down {
   width: 0;
   height: 0;
   display: inline-block;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
+}
+
+.arrow-up {
+  border-bottom: 4px solid #70767f;
+}
+
+.arrow-down {
   border-top: 4px solid #70767f;
 }
+
+.button {
+  padding:.5em 1.5em;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #00cc99;
+}
+
+.page {
+  height: 100%;
+  overflow: auto;
+}
+
+
 
 /*------------------------------------------------------------------
 [2. Navbar]
 */
 
 .navbar {
-  padding: .8em;
+  width: 100%;
+  padding: .6em 0 .8em;
+  position: fixed;
+  top: 0;
+  z-index: 1;
   background-color: #262728;
   font-size: 1.1em;
 
@@ -85,6 +117,10 @@ a {
     span {
       color: #70767f;
     }
+  }
+
+  a {
+    text-decoration: none;
   }
 
   .icon-simplysocial,
@@ -137,6 +173,7 @@ a {
     top: 50%;
   }
 
+  .arrow-up,
   .arrow-down {
     float: right;
     position: relative;
@@ -152,7 +189,7 @@ a {
 */
 
 .hero {
-  // background: url(assets/images/hero.jpg) top center no-repeat;
+  margin-top: 3.75em;
   background: url(assets/images/hero-bg.png) top center;
 }
 
@@ -250,6 +287,10 @@ a {
     border-radius: 4px;
     list-style: none;
   }
+
+  .photo {
+    margin-bottom: -5px;
+  }
 }
 
 .post__body {
@@ -265,16 +306,11 @@ a {
     font-weight: normal;
   }
 
-  img {
+  .avatar {
     float: left;
     position: absolute;
     left: 25px;
   }
-}
-
-.post__body--reply {
-  border-top: 1px solid #eff0f2;
-  background-color: #f9fafc;
 }
 
 .post__social {
@@ -283,6 +319,20 @@ a {
   a {
     margin: 0 0 0 1em;
     display: inline-block;
+    text-decoration: none;
+    cursor: default;
+
+    &:hover {
+      .icon-reply {
+        color: #00cc99;
+        cursor: pointer;
+      }
+
+      .icon-like {
+        color: #ff3366;
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -290,9 +340,56 @@ a {
   margin: 2em 0 0;
   font-size: .8em;
 
+  .arrow-up,
   .arrow-down {
     border-top-color: #c3c7d0;
+    border-bottom-color: #c3c7d0;
     position: relative;
     top: -2px;
+  }
+}
+
+.post__reply {
+  padding: 25px;
+
+  input {
+    width: 100%;
+    padding: .5em;
+    border: 1px solid #dee1e5;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+}
+
+.post__reply,
+.post__body--reply {
+  border-top: 1px solid #eff0f2;
+  background-color: #f9fafc;
+}
+
+
+/*------------------------------------------------------------------
+[5. Footer]
+*/
+
+.footer {
+  padding:1em;
+  border-top: 1px solid #dee1e5;
+  text-transform: uppercase;
+  font-size: .75em;
+  font-weight: bold;
+
+  .inner {
+    text-align: center;
+  }
+
+  li {
+    padding: 1em;
+    display: inline-block;
+    list-style: none;
+  }
+
+  a {
+    color: #00cc99;
   }
 }

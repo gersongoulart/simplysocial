@@ -1,0 +1,15 @@
+<img class="avatar" ng-src="{{post.avatar}}"/>
+
+<div class="post__social">
+  <a href="#"><span class="icon-reply"></span></a>
+  <a href="#"><span class="icon-like"></span></a>
+  <a href="#">3m</a>
+</div>
+
+<h6>{{post.name}}</h6>
+<span ng-bind-html="post.body | links"></span>
+
+<div class="post__expand" ng-if="post.replies" ng-click="toggleReplies()">
+  <a href="#" ng-show="!post.showReplies">Expand <span class="arrow-down"></span></a>
+  <a href="#" ng-show="post.showReplies">Collapse <span class="arrow-up"></span></a>
+</div>
