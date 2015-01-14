@@ -9,6 +9,7 @@ module.exports =
     // useful directives, filters, services shared across the app
     require('../common').name,
     // app module:
+    require('./dialog').name,
     require('./navbar').name,
     require('./home').name,
     //load extra app modules here, e.g.:

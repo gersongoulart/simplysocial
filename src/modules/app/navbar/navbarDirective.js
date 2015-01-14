@@ -5,8 +5,13 @@ module.exports = /*@ngInject*/
     return {
       restrict: 'E',
       transclude: true,
-      templateUrl: 'app/navbar/layout.html'
+      // require: 'dialog',
+      templateUrl: 'app/navbar/layout.html',
       // scope: {},
-      // controller: function($scope) {}
+      link: function(scope, element, attrs, dialogCtrl) {
+      	scope.newMessage = function(){
+      		scope.publish('dialog.open');
+      	};
+      }
     };
   };

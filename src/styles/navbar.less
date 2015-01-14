@@ -1,0 +1,143 @@
+/*------------------------------------------------------------------
+[Navbar]
+*/
+
+.navbar {
+  width: 100%;
+  padding: .6em 0 .8em;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: #262728;
+  font-size: 1.1em;
+
+  h1 {
+    padding: 0;
+    float:left;
+    color: #bec3cc;
+    font-size: 1em;
+    font-weight: normal;
+
+    span {
+      color: #70767f;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .icon-simplysocial,
+  .icon-new-message {
+    color: #00cc99;
+    font-size: 1.5em;
+    margin-top: -.5em;
+    position: relative;
+    top: .3em;
+  }
+}
+
+.user-panel {
+  float:right;
+
+  & > li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin-left: 1em;
+  }
+}
+
+.user-panel__search {
+  border: 1px solid #515458;
+  border-radius: 3px;
+
+  input {
+    height: 17px;
+    margin:.5em;
+    color: #70767f;
+    border: 0;
+    background-color: #262728;
+    outline: none;
+    font-size: .75em;
+  }
+
+  .icon-search {
+    color: #616468;
+    margin: -.5em .5em 0;
+    position: relative;
+    top: .15em;
+  }
+}
+
+.user-panel__profile {
+  img {
+    margin-top: -17px;
+    position: absolute;
+    top: 50%;
+  }
+
+  .arrow-up,
+  .arrow-down {
+    float: right;
+    position: relative;
+    top: 0px;
+    margin: 0 0 0 40px;
+    border-top-color: #616468;
+  }
+}
+
+.popover {
+  margin-left: -50%;
+  padding-top: 24px;
+  position: absolute;
+  display: none;
+  list-style: none;
+  font-size: .65em;
+
+  &:before {
+    .arrow-up();
+    // margin-left: -4px;
+    position: absolute;
+    top: 20px;
+    // left: 50%;
+    right: 18px;
+    content: "";
+    border-bottom-color: #f4f5f7;
+  }
+
+  li {
+    border-top: 1px solid #e3e5e9;
+    background-color: #f4f5f7;
+
+    &:first-child {
+      border-top: 0;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    a {
+      padding: .6em 1.75em;
+      display: block;
+      color: #81868e;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: #e0e3e6;
+      }
+    }
+  }
+
+  &:hover {
+    display: block;
+  }
+}
+
+.user-panel__profile:hover .popover {
+  display: block;
+}

@@ -15,7 +15,7 @@ The solution will be serverd at http://localhost:8080
 
 
 # Notes
-- Created custom webfonts for icons
+- Created custom webfonts for icons (using icomoon.io/app)
 - Using simplified version of BEM for CSS syntax
 - Could be using SCSS for CSS (chose LESS for simplicity of running it with NodeJs withouth dependencies)
 - Not using LESS color functions at this point for not knowing the basic color palette yet

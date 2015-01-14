@@ -1,3 +1,25 @@
+<div class="hero">
+  <div class="hero__bg">
+    <div class="hero__inner">
+      <div class="hero__add-message">
+        <input type="text" placeholder="What's in your mind?" autofocus />
+        <ul>
+          <li><span class="icon-photo"></span> Add Photo</li>
+          <li><span class="icon-video"></span> Add Video</li>
+        </ul>
+      </div>
+
+      <ul class="hero__menu">
+        <li class="active">All Posts</li>
+        <li class="">Photos</li>
+        <li class="">Videos</li>
+        <li class="icon"><span class="icon-tile"></span></li>
+        <li class="icon current"><span class="icon-list"></span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <div class="posts" ng-controller="homeController">
   <ul class="posts--list-view">
     <li ng-repeat="mainPost in posts" post>

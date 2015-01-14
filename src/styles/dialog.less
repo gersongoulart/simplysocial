@@ -69,6 +69,7 @@
 		border: 0;
 		border-radius: 3px;
 		font-size: 1.33em;
+    outline: none;
 	}
 }
 
@@ -93,25 +94,26 @@
 originally authored by Nick Pettit - https: //github.com/nickpettit/glide
 */
 
-.keyframes {
-  0%   { -webkit-transform: scale(1); }
-  50%  { -webkit-transform: scale(1.015); }
-  100% { -webkit-transform: scale(1); }
+.intro-keyframes {
+  0%   { -webkit-transform: scale(.9); opacity: .5; }
+  50%  { -webkit-transform: scale(1.05); }
+  100% { -webkit-transform: scale(1); opacity: 1; }
 }
 
-@-webkit-keyframes pulse { .keyframes() }
-@-moz-keyframes pulse { .keyframes() }
-@-ms-keyframes pulse { .keyframes() }
-@keyframes pulse { .keyframes() }
+@-webkit-keyframes intro-pulse { .intro-keyframes() }
+@-moz-keyframes intro-pulse { .intro-keyframes() }
+@-ms-keyframes intro-pulse { .intro-keyframes() }
+@keyframes intro-pulse { .intro-keyframes() }
 
-.pulse {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -o-animation-name: pulse;
-  animation-name: pulse;
+// .pulse {
+.dialog--visible .dialog {
+  -webkit-animation-name: intro-pulse;
+  -moz-animation-name: intro-pulse;
+  -o-animation-name: intro-pulse;
+  animation-name: intro-pulse;
 
-  -webkit-animation-duration: .15s;
-  -moz-animation-duration: .15s;
-  -ms-animation-duration: .15s;
-  animation-duration: .15s;
+  -webkit-animation-duration: .33s;
+  -moz-animation-duration: .33s;
+  -ms-animation-duration: .33s;
+  animation-duration: .33s;
 }

@@ -7,10 +7,15 @@ module.exports =
   ])
   .config(function ($stateProvider) {
     $stateProvider
-    .state('home', {
-      url: '',
-      templateUrl: 'app/home/layout.html',
-      controller: 'homeController'
-    });
+      .state('home', {
+        url: '',
+        templateUrl: 'app/home/layout.html',
+        controller: 'homeController'
+      })
+      .state('settings', {
+        url: '/settings',
+        templateUrl: 'app/settings/layout.html',
+        controller: 'homeController'
+      });
   })
   .controller('homeController', require('./homeController'));
