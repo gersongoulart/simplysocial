@@ -97,10 +97,8 @@
 
   &:before {
     .arrow-up();
-    // margin-left: -4px;
     position: absolute;
     top: 20px;
-    // left: 50%;
     right: 18px;
     content: "";
     border-bottom-color: #f4f5f7;
@@ -109,6 +107,7 @@
   li {
     border-top: 1px solid #e3e5e9;
     background-color: #f4f5f7;
+    overflow: hidden;
 
     &:first-child {
       border-top: 0;
@@ -125,9 +124,8 @@
       padding: .6em 1.75em;
       display: block;
       color: #81868e;
-      border-radius: 3px;
 
-      &:hover {
+      &:hover, &.active {
         background-color: #e0e3e6;
       }
     }

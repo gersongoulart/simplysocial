@@ -1,95 +1,103 @@
-<div class="posts">
-	<h1>Settings</h1>
+<div class="profile">
+  <h1>Settings</h1>
 
-	<h5>Account</h5>
-	<label for="account-username" class="field-text">
-		<span class="icon-user"></span>
-		<input type="text" id="account-username" value="Jessica Tuan" />
-	</label>
+  <h5>Account</h5>
 
-	<label for="account-email" class="field-text">
-		<span class="icon-email"></span>
-		<input type="email" id="account-email" value="jessica@mail.com" />
-	</label>
+  <div class="profile__photo">
+    <img class="avatar" ng-src="assets/images/avatar-19.jpg"/>
+    <a href="#/settings">change</a>
+  </div>
 
-	<label for="account-password" class="field-text">
-		<span class="icon-lock"></span>
-		<input type="password" id="account-password" value="*******" disabled="disabled" />
-		<a href="#/settings">Change</a>
-	</label>
+  <div class="profile__data">
+    <label for="account-username" class="field-text">
+      <span class="icon-user"></span>
+      <input type="text" id="account-username" value="Jessica Tuan" />
+    </label>
 
-	<hr />
-	<h5>Notifications</h5>
+    <label for="account-email" class="field-text">
+      <span class="icon-email"></span>
+      <input type="email" id="account-email" value="jessica@mail.com" />
+    </label>
 
-	<div class="field-switch">
-		<input type="checkbox" id="notifications-favourites" checked="checked" />
-		<label for="notifications-favourites"></label>
-		email me when my posts are marked as favorites
-	</div>
+    <label for="account-password" class="field-text">
+      <span class="icon-lock"></span>
+      <input type="password" id="account-password" value="*******" disabled="disabled" />
+      <a href="#/settings">change</a>
+    </label>
+  </div>
 
-	<div class="field-switch">
-		<input type="checkbox" id="notifications-mentioned" checked="checked" />
-		<label for="notifications-mentioned"></label>
-		email me when I'm mentioned
-	</div>
+  <hr />
+  <h5>Notifications</h5>
 
-	<div class="field-switch">
-		<input type="checkbox" id="notifications-reply" checked="checked" />
-		<label for="notifications-reply"></label>
-		email me when I get a reply
-	</div>
+  <div class="field-switch">
+    <input type="checkbox" id="notifications-favourites" checked="checked" />
+    <label for="notifications-favourites"></label>
+    email me when my posts are marked as favorites
+  </div>
 
-	<div class="field-switch">
-		<input type="checkbox" id="notifications-follows" checked="checked" />
-		<label for="notifications-follows"></label>
-		email me when someone follows me
-	</div>
+  <div class="field-switch">
+    <input type="checkbox" id="notifications-mentioned" checked="checked" />
+    <label for="notifications-mentioned"></label>
+    email me when I'm mentioned
+  </div>
 
-	<hr />
-	<h5>Privacy</h5>
+  <div class="field-switch">
+    <input type="checkbox" id="notifications-reply" checked="checked" />
+    <label for="notifications-reply"></label>
+    email me when I get a reply
+  </div>
 
-	<div class="fields-cozy">
-		<div class="field-radio">
-			<input type="radio" name="tags" id="privacy-tags-anyone" checked="checked" />
-			<label for="privacy-tags-anyone"></label>
-			allow anyone to tag me
-		</div>
+  <div class="field-switch">
+    <input type="checkbox" id="notifications-follows" checked="checked" />
+    <label for="notifications-follows"></label>
+    email me when someone follows me
+  </div>
 
-		<div class="field-radio">
-			<input type="radio" name="tags" id="privacy-tags-followers" />
-			<label for="privacy-tags-followers"></label>
-			only allow people I follow to tag me
-		</div>
+  <hr />
+  <h5>Privacy</h5>
 
-		<div class="field-radio">
-			<input type="radio" name="tags" id="privacy-tags-nobody" />
-			<label for="privacy-tags-nobody"></label>
-			don't allow anyone to tag me
-		</div>
-	</div>
+  <div class="fields-cozy">
+    <div class="field-radio">
+      <input type="radio" name="tags" id="privacy-tags-anyone" checked="checked" />
+      <label for="privacy-tags-anyone"></label>
+      allow anyone to tag me
+    </div>
 
-	<div class="field-radio">
-		<input type="checkbox" id="privacy-location" checked="checked" />
-		<label for="privacy-location"></label>
-		add a location to my posts
-	</div>
+    <div class="field-radio">
+      <input type="radio" name="tags" id="privacy-tags-followers" />
+      <label for="privacy-tags-followers"></label>
+      only allow people I follow to tag me
+    </div>
 
-	<div class="field-radio">
-		<input type="checkbox" id="privacy-email" checked="checked" />
-		<label for="privacy-email"></label>
-		let others find me by my email address
-	</div>
+    <div class="field-radio">
+      <input type="radio" name="tags" id="privacy-tags-nobody" />
+      <label for="privacy-tags-nobody"></label>
+      don't allow anyone to tag me
+    </div>
+  </div>
 
-	<div class="field-radio">
-		<input type="checkbox" id="privacy-ads" checked="checked" />
-		<label for="privacy-ads"></label>
-		tailor ads based on my information
-	</div>
+  <div class="field-radio">
+    <input type="checkbox" id="privacy-location" checked="checked" />
+    <label for="privacy-location"></label>
+    add a location to my posts
+  </div>
 
-	<hr />
-	<br />
-	<a href="#/settings" class="button">Save Changes</a>
-	<br />
-	<br />
-	<br />
+  <div class="field-radio">
+    <input type="checkbox" id="privacy-email" checked="checked" />
+    <label for="privacy-email"></label>
+    let others find me by my email address
+  </div>
+
+  <div class="field-radio">
+    <input type="checkbox" id="privacy-ads" checked="checked" />
+    <label for="privacy-ads"></label>
+    tailor ads based on my information
+  </div>
+
+  <hr />
+  <br />
+  <a href="#/settings" class="button">Save Changes</a>
+  <br />
+  <br />
+  <br />
 </div>

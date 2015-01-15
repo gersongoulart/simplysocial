@@ -7,16 +7,16 @@
 }
 
 input:disabled, textarea:disabled {
-	color: #c5c5c5;
+  color: #c5c5c5;
 }
 
 .fields-cozy {
-	padding: .5em 0;
+  padding: .5em 0;
 
-	.field-switch,
-	.field-radio {
-		padding: .25em 0;
-	}
+  .field-switch,
+  .field-radio {
+    padding: .25em 0;
+  }
 }
 
 
@@ -37,40 +37,40 @@ input:disabled, textarea:disabled {
 */
 
 .field-text {
-	padding: .33em;
-	margin: .75em 0;
-	display: block;
-	clear: both;
-	border: 1px solid #d5d5d5;
-	border-radius: 4px;
-	color: #d5d5d5;
-	-webkit-transition: .25s ease-in-out;
+  padding: .33em;
+  margin: .75em 0;
+  display: block;
+  // clear: both;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  color: #d5d5d5;
+  -webkit-transition: .25s ease-in-out;
 
-	[class^="icon-"], [class*=" icon-"] {
-		margin: 0 .33em;
-	}
+  [class^="icon-"], [class*=" icon-"] {
+    margin: 0 .33em;
+  }
 
-	input {
-		border: 0;
-		outline: none;
-		font-size: 1em;
-	}
+  input {
+    border: 0;
+    outline: none;
+    font-size: 1em;
+  }
 
-	a {
-		padding: .15em .5em 0 0;
-		display: inline-block;
-		float: right;
-		font-size: .8em;
-	}
+  a {
+    padding: .15em .5em 0 0;
+    display: inline-block;
+    float: right;
+    font-size: .8em;
+  }
 }
 
 .field-text--focus {
-	border-color: #00cc99;
-	// color: #00cc99;
+  border-color: #00cc99;
+  // color: #00cc99;
 
-	input {
-		// color: inherit;
-	}
+  input {
+    // color: inherit;
+  }
 }
 
 
@@ -80,71 +80,71 @@ input:disabled, textarea:disabled {
 
 /* The following hides the actual checkbox, so that we only see the label */
 .field-switch {
-	padding: .75em 0;
-	clear: both;
+  padding: .75em 0;
+  clear: both;
 
-	input {
-		max-width: 0;
-		max-height: 0;
-		opacity: 0;
+  input {
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
 
-		/* The "container" for switch "off" state */
-		& + label {
-			width: 50px;
-			height: 26px;
-			margin-right: 1em;
-			display: block;
-			position: relative;
-			float: left;
-			text-indent: -5000px;
-			border-radius: 15px;
-			border: 1px solid #d5d5d5;
-			background-color:#d5d5d5;
+    /* The "container" for switch "off" state */
+    & + label {
+      width: 50px;
+      height: 26px;
+      margin-right: 1em;
+      display: block;
+      position: relative;
+      float: left;
+      text-indent: -5000px;
+      border-radius: 15px;
+      border: 1px solid #d5d5d5;
+      background-color:#d5d5d5;
 
-			/* Green background for "on" state */
-			&:before {
-				width: 22px;
-				height: 24px;
-				content: "";
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				border-radius: 15px;
-				transition: .15s ease-in-out;
-			}
+      /* Green background for "on" state */
+      &:before {
+        width: 22px;
+        height: 24px;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 15px;
+        transition: .15s ease-in-out;
+      }
 
-			/* The actual switch */
-			&:after {
-				content: "";
-				width: 22px;
-				height: 22px;
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0px;
-				border: 1px solid #d5d5d5;
-				border-radius: 15px;
-				background-color: white;
-				transition: .25s ease-in-out;
-			}
-		}
+      /* The actual switch */
+      &:after {
+        content: "";
+        width: 22px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        border: 1px solid #d5d5d5;
+        border-radius: 15px;
+        background-color: white;
+        transition: .25s ease-in-out;
+      }
+    }
 
-		/* The "on" state for the switch */
-		&:checked + label {
-			border-color: #00cc99;
+    /* The "on" state for the switch */
+    &:checked + label {
+      border-color: #00cc99;
 
-			&:before {
-				width: 48px;
-				background-color: #00cc99;
-			}
+      &:before {
+        width: 48px;
+        background-color: #00cc99;
+      }
 
-			&:after {
-				left: 24px;
-				border-color: #00cc99;
-			}
-		}
-	}
+      &:after {
+        left: 24px;
+        border-color: #00cc99;
+      }
+    }
+  }
 }
 
 
@@ -154,63 +154,63 @@ input:disabled, textarea:disabled {
 
 /* The following hides the actual radio/checkbox, so that we only see the label */
 .field-radio {
-	padding: .75em 0;
-	clear: both;
+  padding: .75em 0;
+  clear: both;
 
-	input {
-		max-width: 0;
-		max-height: 0;
-		opacity: 0;
+  input {
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
 
-		/* The "container" for radio "off" state */
-		& + label {
-			width: 24px;
-			height: 24px;
-			margin-right: 1em;
-			display: block;
-			position: relative;
-			float: left;
-			text-indent: -5000px;
-			border-radius: 15px;
-			border: 1px solid #d5d5d5;
+    /* The "container" for radio "off" state */
+    & + label {
+      width: 24px;
+      height: 24px;
+      margin-right: 1em;
+      display: block;
+      position: relative;
+      float: left;
+      text-indent: -5000px;
+      border-radius: 15px;
+      border: 1px solid #d5d5d5;
 
-			/* Green background for "on" state */
-			&:before {
-				width: 16px;
-				height: 16px;
-				content: "";
-				display: block;
-				position: absolute;
-				top: 3px;
-				left: 3px;
-				border-radius: 15px;
-				transition: .15s ease-in-out;
-			}
+      /* Green background for "on" state */
+      &:before {
+        width: 16px;
+        height: 16px;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        border-radius: 15px;
+        transition: .15s ease-in-out;
+      }
 
-			/* The actual radio */
-			&:after {
-				content: "";
-				width: 16px;
-				height: 16px;
-				display: block;
-				position: absolute;
-				top: 3px;
-				left: 3px;
-				border-radius: 15px;
-				background-color: white;
-				transition: .25s ease-in-out;
-			}
-		}
+      /* The actual radio */
+      &:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        border-radius: 15px;
+        background-color: white;
+        transition: .25s ease-in-out;
+      }
+    }
 
-		/* The "on" state for the radio */
-		&:checked + label {
-			&:before {
-				background-color: #00cc99;
-			}
+    /* The "on" state for the radio */
+    &:checked + label {
+      &:before {
+        background-color: #00cc99;
+      }
 
-			&:after {
-				background-color: #00cc99;
-			}
-		}
-	}
+      &:after {
+        background-color: #00cc99;
+      }
+    }
+  }
 }

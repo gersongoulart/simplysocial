@@ -9,9 +9,9 @@ module.exports = /*@ngInject*/
       templateUrl: 'app/navbar/layout.html',
       // scope: {},
       link: function(scope, element, attrs, dialogCtrl) {
-      	scope.newMessage = function(){
-      		scope.publish('dialog.open');
-      	};
+        scope.newMessage = function(){
+          scope.publish('dialog.open');
+        };
       }
     };
   };
