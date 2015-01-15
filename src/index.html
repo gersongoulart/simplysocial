@@ -3,25 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
   <title>Simply Social</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
   <!--styles-->
 </head>
-<body><!-- class="dialog--visible" -->
+<body>
   <div class="page">
     <navbar></navbar>
 
-    <div ui-view></div>
+    <div class="page__body">
+      <div ui-view autoscroll></div>
 
-    <div class="footer">
-      <div class="inner">
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Support</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms</a></li>
-          <li>©2014 simplysocial</li>
-        </ul>
+      <div class="footer">
+        <div class="inner">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li>©2014 simplysocial</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

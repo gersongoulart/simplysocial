@@ -44,8 +44,8 @@ hr {
 
 .clear:before,
 .clear:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    display: table;
 }
 
 .clear:after {
@@ -73,8 +73,11 @@ hr {
   border-top: 4px solid #70767f;
 }
 
-.page {
-  height: 100%;
-  padding-top: 3.75em;
+.page__body {
+  position: absolute;
+  top: 3.73em;
+  right: 0;
+  bottom: 0;
+  left: 0;
   overflow: auto;
 }

@@ -34,7 +34,8 @@
   "browser": {
     "angular": "./bower_components/angular/angular.js",
     "angular-ui-router": "./bower_components/angular-ui-router/release/angular-ui-router.min.js",
-    "angular-sanitize": "./bower_components/angular-sanitize/angular-sanitize.min.js"
+    "angular-sanitize": "./bower_components/angular-sanitize/angular-sanitize.min.js",
+    "angularjs-placeholder": "./bower_components/angularjs-placeholder/src/angularjs-placeholder.js"
   },
   "browserify-shim": {}
 }

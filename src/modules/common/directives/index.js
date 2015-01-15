@@ -2,5 +2,5 @@
 
 module.exports =
   angular.module('SimplySocial.common.directives', [])
-    .directive('post', require('./postDirective'))
-    .directive('fieldText', require('./fieldTextDirective'));
+    .directive('fieldText', require('./fieldTextDirective'))
+    .directive('post', require('./postDirective'));
